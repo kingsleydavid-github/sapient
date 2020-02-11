@@ -15,11 +15,15 @@ import com.kingsley.sapient.service.ProductService;
 
 
 @RestController
-@RequestMapping("/product")
 public class ProductApi {
 
 	@Autowired
 	private ProductService productService;
+	
+
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
+	}
 
 	@GetMapping("/list")
 	public @ResponseBody List<Product> getAllProducts()

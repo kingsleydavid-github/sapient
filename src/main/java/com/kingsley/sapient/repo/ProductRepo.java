@@ -1,4 +1,4 @@
-package com.kingsley.sapient.dao;
+package com.kingsley.sapient.repo;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.kingsley.sapient.model.Product;
 
 @Repository
-public interface ProductDAO extends JpaRepository<Product, Integer> {
+public interface ProductRepo extends JpaRepository<Product, Integer> {
 
 	public Product add(Product product);
 	public List<Product> findAll(); 
