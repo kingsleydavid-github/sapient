@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kingsley.sapient.model.Product;
+import com.kingsley.sapient.search.ProductSearchItems;
 import com.kingsley.sapient.service.ProductService;
 
 @ComponentScan
@@ -32,6 +33,12 @@ public class ProductApi {
 	public @ResponseBody List<Product> getAllProducts()
 	{
 		return productService.getAllProducts();
+	}
+
+	@GetMapping("/list/search")
+	public @ResponseBody List<Product> getAllProducts( @RequestBody ProductSearchItems searchItems)
+	{
+		return productService.searchProducts( searchItems );
 	}
 	
 	@PutMapping("/add")
