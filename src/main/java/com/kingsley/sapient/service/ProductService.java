@@ -22,6 +22,6 @@ public class ProductService {
 	
 	public Product add(Product product)
 	{
-		return productdao.add(product);
+		return productdao.save(product);
 	}
 }

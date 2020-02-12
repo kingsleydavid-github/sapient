@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan("com.kingsley.sapient.model")
-@ComponentScan(basePackages = "com.kingsley.sapient.*")
-@EnableJpaRepositories("com.kingsley.sapient.repo")
+@ComponentScan("com.kingsley.sapient.*")
+@EntityScan("com.kingsley.sapient.*")
+@EnableJpaRepositories("com.kingsley.sapient.*")
 public class SapientApplication {
 
 	public static void main(String[] args) {
